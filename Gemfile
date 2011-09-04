@@ -20,6 +20,7 @@ gem 'jquery-rails'
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'dalli'
+  gem 'pg'
 end
 # Use unicorn as the web server
 # gem 'unicorn'
