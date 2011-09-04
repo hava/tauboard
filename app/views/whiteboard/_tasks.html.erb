@@ -1,0 +1,25 @@
+<tr>
+    <td class="state">
+        <ul>
+            <li>
+                <%= I18n.t(section) %></li>
+            <li class='points'><%= @board.points(section) %></li>
+        </ul>
+    </td>
+    <% @board.member_tasks.each do |members| %>
+        <% tasks = members.send(section) %>
+        <td class="task_column">
+            <ul>
+                <% tasks.each do |story| %>
+                    <li class="task_card">
+
+                        <%= story.name %>
+                        <p class='blank'></p>
+                        <span class="bottom_left"><%= story.priority %></span>
+                        <span class="right_bottom"><%= I18n.t(:estimated_time) %><%= story.points %></span>
+                    </li>
+                <% end %>
+            </ul>
+        </td>
+    <% end %>
+</tr>

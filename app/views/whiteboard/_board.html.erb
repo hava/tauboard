@@ -1,0 +1,19 @@
+<div id='whiteboard_view' data-refresh-action='<%=whiteboard_refresh_path(@project_id, @iteration_group) %>'>
+    <%= button_to I18n.t(:logout), sessions_destroy_path, :method => :delete, :class=> 'link_button top_right' %>
+    <% time = Time.now.in_time_zone('Pretoria') %>
+    <span class="top_right light_font"><%= "#{time.strftime("Last updated on %d/%m/%Y")} #{time.strftime("at %H:%M:%S")}" %></span>
+
+    <h2>Whiteboard</h2>
+    <table id='whiteboard'>
+        <tr>
+            <th class="state"></th>
+            <% @board.member_tasks.each do |member_task| %>
+                <th><%= member_task.member_name %></th>
+            <% end %>
+        </tr>
+        <%= render :partial => 'tasks', :locals => {:section => :todo} %>
+        <%= render :partial => 'tasks', :locals => {:section => :active} %>
+        <%= render :partial => 'tasks', :locals => {:section => :test} %>
+        <%= render :partial => 'tasks', :locals => {:section => :done} %>
+    </table>
+</div>

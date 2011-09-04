@@ -1,0 +1,133 @@
+html {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+}
+
+ul {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.top_right {
+    float: right;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.light_font {
+    color: #999999;
+}
+
+.task_card {
+    background-color: #ecebeb;
+    -moz-box-shadow: 5px 5px 5px #888;
+    -webkit-box-shadow: 5px 5px 5px #888;
+    box-shadow: 5px 5px 5px #888;
+    padding: 3px 3px 3px 3px;
+    text-align: center;
+    min-height: 50px;
+    position: relative;
+    margin: 10px auto;
+}
+
+.right_bottom {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+
+}
+
+.top_left {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+
+}
+
+.bottom_left {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+}
+
+.task_column {
+    min-width: 115px;
+}
+
+th {
+    color: #f2f1f1;
+    background-color: #256188;
+}
+
+#whiteboard
+{
+  margin: auto;
+  min-width: 300px;
+}
+
+
+table, td {
+    border: 1px solid #666666;
+    border-collapse: collapse;
+}
+
+.state {
+    font-weight: bolder;
+    max-width: 45px;
+}
+
+.state ul
+{
+    padding: 0
+}
+
+.state li
+{
+    text-align: center;
+}
+.state li.points
+{
+    font-weight: normal;
+    font-style: italic;
+}
+
+.login_dialog {
+    margin: 15% auto 0;
+    position: relative;
+    width: 400px;
+}
+
+.login_column {
+    position: static;
+}
+
+.login_inner {
+    color: #f2f1f1;
+    background-color: #256188;
+}
+
+.login_inner form {
+    padding: 24px 30px;
+    position: relative;
+}
+
+label {
+    display: block;
+    width: 20px;
+}
+
+.login_button {
+    bottom: 10px;
+    right: 10px;
+}
+
+.link_button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: block;
+    text-decoration: underline;
+
+}

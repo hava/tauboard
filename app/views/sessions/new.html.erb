@@ -1,0 +1,20 @@
+<div class='login_column'>
+    <div class='login_dialog'>
+        <div class="login_inner">
+            <%= form_for(@user, :url => sessions_create_path) do |form| %>
+                <h1>Tau board</h1>
+                <p>
+                    <%= form.label :user %>
+                    <%= form.text_field :user %>
+                </p>
+
+                <p>
+                    <%= form.label :password %>
+                    <%= form.password_field :password %>
+                </p>
+
+                <%= form.submit 'Login', :class => 'right_bottom login_button' %>
+            <% end %>
+        </div>
+    </div>
+</div>
